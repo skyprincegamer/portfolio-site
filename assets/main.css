@@ -1,0 +1,63 @@
+@property --stop {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 5%;
+}
+
+@keyframes stop-pulse {
+    from { --stop: 5%; }
+    to   { --stop: 95%; }
+}
+
+.text-pulse {
+    background: radial-gradient(
+            circle,
+            rgb(149, 4, 4) 0%,
+            rgb(255, 0, 63) var(--stop),
+            rgb(255, 0, 0) 100%
+    );
+    animation: stop-pulse 2s ease-in-out infinite alternate;
+    background-clip: text;
+    color: transparent;
+}
+.gradient-pulse{
+    background: radial-gradient(
+            circle,
+            rgb(27, 1, 1) 0%,
+            rgba(192, 58, 85, 1) var(--stop),
+            rgba(198, 59, 87, 1) max(70%, var(--stop)),
+            rgba(252, 70, 107, 1) 100%
+    );
+    animation: stop-pulse 4s ease-in-out infinite alternate;
+}
+@keyframes flow-water {
+    from { background-position: 200% center; }
+    to   { background-position: 0% center; }
+}
+
+.gradient-water-text {
+    background: linear-gradient(
+            90deg,
+            #38bdf8 0%,    /* Vibrant base blue (readable on black) */
+            #38bdf8 42%,   /* Still vibrant base */
+            #7dd3fc 48%,   /* Quick fade to lighter cyan */
+            #ffffff 50%,   /* Sharp, pure white surface glint */
+            #7dd3fc 52%,   /* Quick fade back */
+            #38bdf8 58%,   /* Back to vibrant base */
+            #38bdf8 100%   /* Vibrant base */
+    );
+    background-size: 200% auto;
+    animation: flow-water 4s linear infinite;
+    background-clip: text;
+    color: transparent;
+}
+
+.tree-pulse{
+    background: radial-gradient(
+            circle,
+            rgb(0, 148, 44) 0%,
+            rgb(0, 0, 0) 70%,
+            rgb(0, 0, 0) 100%
+    );
+    animation: stop-pulse 4s ease-in-out infinite alternate;
+}
