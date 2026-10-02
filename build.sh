@@ -5,7 +5,7 @@ source "$HOME/.cargo/env"
 
 rustup target add wasm32-unknown-unknown
 
-curl -fL https://dioxuslabs.com/install.sh | bash
+cargo install dioxus-cli --locked
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
