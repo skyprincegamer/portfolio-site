@@ -139,7 +139,7 @@ pub fn Content() -> Element {
                             p { class: "text-sm mb-6 font-[MonoS]", "Rust, cpal, rustfft, Macroquad, TOML" }
                             ul { class: "list-disc list-outside ml-4 text-gray-400 font-[Lato] text-sm space-y-3 flex-grow leading-relaxed",
                                 li { "Solved spectral leakage and ambient noise pollution in real-time audio analysis by implementing Blackman-Nuttall windowing and live spectrum subtraction." }
-                                li { "Processed 44.1kHz audio streams with sub-16ms visual render cycles, achieving 22us lock-free FFT pipeline cadences via atomic memory ordering." }
+                                li { "Processed 44.1kHz audio streams with sub-16ms visual render cycles, achieving 22 microseconds lock-free FFT pipeline cadences via atomic memory ordering." }
                             }
                         }
                     }
